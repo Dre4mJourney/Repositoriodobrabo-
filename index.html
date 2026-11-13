@@ -1,95 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
+    <meta charset="UTF-8">
     <title>Meu Portifólio</title>
     <style>
-      .tabela {width: 80%;margin-left: auto;margin-right: auto;border-collapse: collapse;text-align: justify;}
-      th td {border: 1px solid black;
-            padding: 8px;}
+      /* Configurações gerais da página */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f9fc;
+        color: #333333;
+        margin: 0;
+        padding: 40px 20px;
+      }
+      
+      /* Estilo do título principal */
+      h1 {
+        text-align: center;
+        color: #1a202c;
+        margin-bottom: 30px;
+      }
+
+      /* Estilo principal da tabela */
+      .tabela {
+        width: 80%;
+        margin: 0 auto; /* Centraliza a tabela */
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        border-radius: 8px; /* Cantos arredondados */
+        overflow: hidden; /* Garante que os cantos arredondados funcionem com o fundo */
+      }
+
+      /* Espaçamento interno das células */
+      .tabela th, .tabela td {
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      /* Estilo do cabeçalho da tabela */
+      .tabela th {
+        background-color: #2d3748;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+
+      /* Remove a borda da última linha para um visual mais limpo */
+      .tabela tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* Cor de fundo alternada para as linhas (Efeito Zebra) */
+      .tabela tr:nth-child(even) {
+        background-color: #edf2f7;
+      }
+
+      /* Efeito de destaque ao passar o mouse sobre a linha */
+      .tabela tr:hover {
+        background-color: #e2e8f0;
+        transition: background-color 0.2s ease;
+      }
+
+      /* Estilo dos links */
+      a {
+        text-decoration: none;
+        color: #3182ce;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+
+      /* Efeito ao passar o mouse no link */
+      a:hover {
+        color: #2b6cb0;
+        text-decoration: underline;
+      }
     </style>
   </head>
-  
-      <body>
+  <body>
     <h1>Arthur Lima Lobão</h1>
-    <table class="tabela" border="1">
-      <tr>
-        <th>Nome da atividade</th>
-        <th>Data</th>
-        <th>Link da Atividade</th>
-      </tr>
-      <tr>
-       <td>Aula 2 - Minha primeira página web</td>
-       <td>07/08/26</td>
-       <td><a href="https://dre4mjourney.github.io/TeleSantana">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 3 - Links</td>
-        <td>10/08/26</td>
-        <td><a href="https://dre4mjourney.github.io/Lugano-/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 6 - Listas e citações</td>
-        <td>20/08/26</td>
-        <td><a href="https://dre4mjourney.github.io/Lucianjo/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 7 - Tabelas</td>
-        <td>28/08/26</td>
-        <td><a href="https://dre4mjourney.github.io/TocaNoCalleri/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 7 - Tabelas</td>
-        <td>28/08/26</td>
-        <td><a href="https://dre4mjourney.github.io/RaphinhaBallonDor/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 8 - Desenvolvimento de páginas web com CSS</td>
-        <td>04/09/26</td>
-        <td><a href="https://dre4mjourney.github.io/CalleriGol/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 9 - CSS - Seletores em grupo e pseudo classes</td>
-        <td>21/08/26</td>
-        <td><a href="https://dre4mjourney.github.io/RogerioCeni/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 13 - Página Web com o uso da tag DIV</td>
-        <td>23/10/2026</td>
-        <td><a href="https://dre4mjourney.github.io/Cavalos-/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 14 - Formulário Temático</td>
-        <td>04/11/2026</td>
-        <td><a href="https://dre4mjourney.github.io/Assalto-/">acessar atividade</a></td>
-      </tr>
-      <tr>
-        <td>Aula 14 - Formulário Temático</td>
-        <td>11/11/2026</td>
-        <td><a href="https://dre4mjourney.github.io/AlisaMeuPelo/">acessar atividade</td>
-      </tr>
-      <tr>
-        <td>Aula 17 - Áudio e Vídeo</td>
-        <td>13/11/2026</td>
-        <td><a href="https://dre4mjourney.github.io/Gurren-Lagann/">acessar atividade</td>
-      </tr>
-
-
-
-
-
-
-
-
-
-
-
-      
     
-    
-    
-    
+    <!-- O atributo border="1" foi removido pois as bordas agora são controladas pelo CSS -->
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Nome da atividade</th>
+          <th>Data</th>
+          <th>Link da Atividade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aula 2 - Minha primeira página web</td>
+          <td>07/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/TeleSantana" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 3 - Links</td>
+          <td>10/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/Lugano-/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 6 - Listas e citações</td>
+          <td>20/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/Lucianjo/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 7 - Tabelas</td>
+          <td>28/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/TocaNoCalleri/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 7 - Tabelas</td>
+          <td>28/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/RaphinhaBallonDor/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 8 - Desenvolvimento de páginas web com CSS</td>
+          <td>04/09/26</td>
+          <td><a href="https://dre4mjourney.github.io/CalleriGol/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 9 - CSS - Seletores em grupo e pseudo classes</td>
+          <td>21/08/26</td>
+          <td><a href="https://dre4mjourney.github.io/RogerioCeni/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 13 - Página Web com o uso da tag DIV</td>
+          <td>23/10/2026</td>
+          <td><a href="https://dre4mjourney.github.io/Cavalos-/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 14 - Formulário Temático</td>
+          <td>04/11/2026</td>
+          <td><a href="https://dre4mjourney.github.io/Assalto-/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 14 - Formulário Temático</td>
+          <td>11/11/2026</td>
+          <td><a href="https://dre4mjourney.github.io/AlisaMeuPelo/" target="_blank">acessar atividade</a></td>
+        </tr>
+        <tr>
+          <td>Aula 17 - Áudio e Vídeo</td>
+          <td>13/11/2026</td>
+          <td><a href="https://dre4mjourney.github.io/Gurren-Lagann/" target="_blank">acessar atividade</a></td>
+        </tr>
+      </tbody>
     </table>
-    
-    
   </body>
 </html>
+
